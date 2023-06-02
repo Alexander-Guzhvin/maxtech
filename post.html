@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container _container">
+        <div class="header__content">
+            <div class="header__logo"><a href="/">MAXTECH</a></div>
+            <div class="header__menu">
+                <div type="button" class="menu__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list" id="top-menu">
+                        <li class="menu__item"><a href="#1" class="menu__link" data-goto=".page__section-1">ДЛЯ КОГО</a></li>
+                        <li class="menu__item"><a href="#2" class="menu__link" data-goto=".page__section-2">ВЫГОДЫ</a></li>
+                        <li class="menu__item"><a  href="#3" class="menu__link" data-goto=".page__section-3">О КОМПАНИИ</a></li>
+                        <li class="menu__item"><a  href="#4" class="menu__link" data-goto=".page__section-4">КЕЙСЫ</a></li>
+                        <li class="menu__item"><a  href="#3" class="menu__link" data-goto=".page__section-3">КОНТАКТЫ</a></li>
+                    </ul>
+                    <a href="/" class="header__link-mob">ОСТАВИТЬ ЗАЯВКУ</a>
+                </nav>
+            </div>
+            <a href="/" class="header__link">ОСТАВИТЬ ЗАЯВКУ</a>
+        </div>
+    </div>
+    </header>
+    <div class="home-post">
+        <div class="home-post__container _container">
+            <h1 class="home-post__h1">title</h1>
+            <div class="home-post__text">text</div>
+            <h2 class="home-post__h2">title</h2>
+            <div class="home-post__text">text</div>
+            <h3 class="home-post__h3">title</h3>
+            <div class="home-post__text">text</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__container _container">
+            <div class="footer__content">
+                <div class="footer__info info-footer">
+                    <div class="info-footer__items">
+                        <div class="info-footer__item-1">
+                            <div class="info-footer__logo">MaxTech</div>
+                            <a href="" class="info-footer__link">8 499 990-08-81</a>
+                            <a href="" class="info-footer__link">HELLO@MAXREPUTATION.RU</a>
+                        </div>
+                        <div class="info-footer__menu">
+                            <li class="info-footer__item"><a href="#1" class="info-footer__link" data-goto=".page__section-1">ДЛЯ КОГО</a></li>
+                            <li class="info-footer__item"><a href="#2" class="info-footer__link" data-goto=".page__section-2">ВЫГОДЫ</a></li>
+                            <li class="info-footer__item"><a  href="#3" class="info-footer__link" data-goto=".page__section-3">О КОМПАНИИ</a></li>
+                            <li class="info-footer__item"><a  href="#4" class="info-footer__link" data-goto=".page__section-4">КЕЙСЫ</a></li>
+                            <li class="info-footer__item"><a  href="#3" class="info-footer__link" data-goto=".page__section-3">КОНТАКТЫ</a></li>
+                        </div>
+                    </div>
+                    <div class="info-footer__btns">
+                        <form action="">
+                            <div class="info-footer__btn">TELEGRAM</div>
+                        </form>
+                        <form action="">
+                            <div class="info-footer__btn">WHATSAPP</div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer__active active-footer">
+                    <div class="active-footer__text">Оставьте заявку, чтобы получить бесплатную консультацию, где мы ответим на ваши вопросы и предложим пути решения</div>
+                    <form action="">
+                        <div class="active-footer__btn _btn">Оставить заявку</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        var accordion = (function (element) {
+
+var _getItem = function (elements, className) { // функция для получения элемента с указанным классом
+  var element = undefined;
+  elements.forEach(function (item) {
+    if (item.classList.contains(className)) {
+      element = item;
+    }
+  });
+  return element;
+};
+
+return function () {
+  var _mainElement = {}, // .accordion
+    _items = {}, // .accordion-item
+    _contents = {}; // .accordion-item-content 
+
+
+  var _actionClick = function (e) {
+    if (!e.target.classList.contains('accordion-item-header')) { // прекращаем выполнение функции если кликнули не по заголовку
+      return;
+    }
+    e.preventDefault();   // Отменям стандартное действие
+    // получаем необходимые данные
+    var header = e.target,
+      item = header.parentElement,
+      itemActive = _getItem(_items, 'show');
+
+    if (itemActive === undefined) { // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+      item.classList.add('show');
+    } else {
+      // удаляем класс show у ткущего элемента
+      itemActive.classList.remove('show');
+      // если следующая вкладка не равна активной
+      if (itemActive !== item) {
+        // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+        item.classList.add('show');
+      }
+    }
+  },
+    _setupListeners = function () {
+      // добавим к элементу аккордиона обработчик события click
+      _mainElement.addEventListener('click', _actionClick);
+    };
+
+  return {
+    init: function (element) {
+      _mainElement = (typeof element === 'string' ? document.querySelector(element) : element);
+      _items = _mainElement.querySelectorAll('.accordion-item');
+      _setupListeners();
+    }
+  }
+
+}
+})();
+
+var accordion1 = accordion();
+accordion1.init('#accordion');
+
+
+
+
+
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if (menuLinks.length > 0) {
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
+
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top;
+			let iconMenu = document.querySelector(".icon-menu");
+			let menuBody = document.querySelector(".menu__body");
+			iconMenu.classList.remove("_active");
+			menuBody.classList.remove("_active");
+			if (iconMenu.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				iconMenu.classList.remove('_active');
+				menuBody.classList.remove('_active');
+			}
+			window.scrollTo({
+				
+				top: gotoBlockValue,
+				behavior: "smooth"
+			});
+			
+			e.preventDefault();
+			
+		}
+	}
+}
+
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

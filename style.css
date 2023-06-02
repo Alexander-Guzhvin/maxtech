@@ -1450,3 +1450,16 @@ content: '';
     @media (max-width: 380px) {
 
     }
+
+
+
+.home-post__h1, .home-post__h2, .home-post__h3 {
+  margin-top: 70px;
+}
+.home__text{
+  margin-top: 25px;
+}
+
+.home-post{
+  padding-bottom: 40px;
+}
