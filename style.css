@@ -1055,6 +1055,28 @@ content: '';
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
+
+
+
+
+
+
+
+
+.home-post__btn{
+  text-decoration: underline;
+    color: #dbb611;
+    font-size: 12px;
+    font-weight: 400;
+    background: none;
+    border: none;
+    margin-left: -5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
 @media (max-width: 1600px) and (min-width: 961px){
   .body__bg{
     top: -100px;
